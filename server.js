@@ -1,4 +1,4 @@
-const express = require("express");
+ const express = require("express");
 // const bodyParser = require("body-parser"); /* deprecated */
 const cors = require("cors");
 const chalk = require('chalk');
@@ -41,7 +41,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
-require("./app/routes/turorial.routes")(app);
+require("./app/routes/user.routes")(app);
+require("./app/routes/words.routes")(app);
 
 // set port, listen for requests
 //const PORT = process.env.PORT || 8080;

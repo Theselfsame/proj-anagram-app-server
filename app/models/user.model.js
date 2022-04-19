@@ -1,9 +1,11 @@
 module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
-      title: String,
-      description: String,
-      published: Boolean
+      login: String,
+      password: String,
+      easyScore: Number,
+      mediumScore: Number,
+      hardScore: Number,
     },
     { timestamps: true }
   );
@@ -14,6 +16,6 @@ module.exports = mongoose => {
     return object;
   });
 
-  const Tutorial = mongoose.model("tutorial", schema);
-  return Tutorial;
+  const User = mongoose.model("user", schema);
+  return User;
 };
